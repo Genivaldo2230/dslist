@@ -19,7 +19,8 @@ public class Controllers {
     @GetMapping
     public List<GameMiniDTO> findAll() {
         List<GameMiniDTO> result = gameServices.findAll();
-        return result;
+        return ;
+
 
     }
 
