@@ -17,7 +17,7 @@ public class GameDTO {
     private String longDescription;
 
 public GameDTO(Game entity){
-    BeanUtils.copyProperties(entity,this);
+    BeanUtils.copyProperties(entity,this); //metodo copy e propreti faz copia da entidade para um obejto se os nome dos campos for mesmo copia tudo  temos que usar o get e set 
 }
 
     public long getId() {

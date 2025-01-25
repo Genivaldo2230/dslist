@@ -1,9 +1,9 @@
 package com.devesuperior.dslist.dto;
 
 import com.devesuperior.dslist.entities.Game;
-import jakarta.persistence.Column;
+import com.devesuperior.dslist.projection.GameMinProjection;
 
-public class GameMiniDTO {
+public class GameMinDTO {
 
     private long id;
     private String title;
@@ -11,16 +11,24 @@ public class GameMiniDTO {
     private String imgUrl;
     private String shortDescription;
 
-    public GameMiniDTO(){
+    public GameMinDTO(){
 
     }
     //nesse modelo vamos usar a Entity pra receber a chamada dos dados dentro da Dto
-    public GameMiniDTO(Game entity) {
+    public GameMinDTO(Game entity) {
         id = entity.getId();
         title = entity.getTitle();
         year = entity.getYear();
         imgUrl = entity.getImgUrl();
         shortDescription = entity.getShortDescription();
+    }
+
+    public GameMinDTO(GameMinProjection projection) {
+        id = projection.getId();
+        title = projection.getTitle();
+        year = projection.getYear();
+        imgUrl = projection.getImgUrl();
+        shortDescription = projection.getShortDescription();
     }
 
     public long getId() {

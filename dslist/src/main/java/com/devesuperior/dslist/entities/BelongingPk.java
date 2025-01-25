@@ -7,7 +7,7 @@ import org.hibernate.annotations.ManyToAny;
 
 import java.util.Objects;
 
-@Embeddable
+@Embeddable //essa notação ele encapsula dois atributos em um que nossa class
 public class BelongingPk {
 
     @ManyToOne
